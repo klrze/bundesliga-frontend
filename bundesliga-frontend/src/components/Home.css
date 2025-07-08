@@ -1,0 +1,20 @@
+.intro {
+       position: fixed; 
+        align-content: center;
+        left: 10%; 
+        top: 50%; 
+        transform: translateY(-50%); 
+        width: 40%; 
+        max-height: 90%; 
+        flex-wrap: wrap;
+        display: flex;
+        
+
+}
+
+.title {
+  font-size: 80px;
+  max-height: 90%;
+  flex-wrap: wrap;
+  white-space: normal; 
+}

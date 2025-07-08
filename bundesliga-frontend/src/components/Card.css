@@ -1,0 +1,68 @@
+.players {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -35%);
+  width: 70%;
+  height: 77%;
+  overflow-y: auto;
+    justify-content: center; /* Vertical centering */
+  align-items: center;  
+}
+
+.cards {
+  display: inline-block;
+  border: 1px solid black;
+  border-radius: 10px;
+  box-shadow: 5px 5px 5px rgba(86, 82, 82, 0.187);
+  padding: 20px;
+  margin: 80px;
+  text-align: center;
+  width: 250px;
+  height: 130px;
+  background-color: yellow;
+  justify-content: center; /* Vertical centering */
+  align-items: center;  
+  overflow: hidden; 
+}
+
+.playerInfo {
+  margin-top: auto;
+  justify-content: center; /* Vertical centering */
+  align-items: center;  
+}
+
+.search {
+ margin: auto;
+ margin-top:120px;
+ width: 60%;
+text-align: center;
+}
+
+.search-label {
+  font-size: 40px;
+}
+
+.button {
+  float: right;
+  width: 15%;
+  margin-right: 25px;
+  text-align: center;
+  font-size: 25px;
+  margin-top: -80px;
+}
+.button button {
+  width: 100px;
+  height: 40px;
+  font-size: 30px;
+
+}
+
+.default-button {
+  background-color: white;
+}
+
+.sorted-button {
+  background-color: black;
+  color: white
+}
