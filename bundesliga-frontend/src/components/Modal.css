@@ -1,0 +1,20 @@
+
+
+
+.modal {
+  border-style: solid;
+  border-color: black;
+  float: left;
+  margin-left: 25px;
+  margin-top: -38px;
+  height:800px;
+  width:300px;
+  
+}
+
+.close {
+  background-color: white;
+  width: 100px;
+  height: 30px;
+  font-size: 20px;
+}
