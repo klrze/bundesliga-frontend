@@ -3,14 +3,16 @@ import './Card.css';
 import { allPlayers } from '../services/Service';
 import { useState, useEffect } from 'react';
 import axios from 'axios';
-
+import Modal from './Modal'
 
 const Card = () => {
 
   const [players, setPlayers] = useState([])
   const [searchTerm, setSearchTerm] = useState('');
   const [isSorted, setIsSorted] = useState(false);
-
+  const [showModal, setShowModal] = useState(false);
+  const [selectedPlayer, setSelectedPlayer] = useState(null);
+  const [loading, setLoading] = useState(false);
 
 
   useEffect(() => {
@@ -53,6 +55,10 @@ const playersToDisplay = searchTerm ? filteredPlayers : players.slice(0, 50);
     setIsSorted(false);
   };
 
+    const handleInfoClick = (player) => {
+    setSelectedPlayer(player);
+    setShowModal(true);
+  };
   
   
   return (
@@ -71,13 +77,23 @@ const playersToDisplay = searchTerm ? filteredPlayers : players.slice(0, 50);
           <h2 className="playerInfo">{player.name}</h2>  
           <p className="playerInfo">{player.club}</p>
           <p className="playerInfo">{player.nationality}</p>
+          <button className="options" onClick={() => handleInfoClick(player)}>Info</button>
+          <button className="options">Add</button>
         </div>
         ))}
+
       </div>
-      <div className="button">
+               {/* 🟢 Modal Display */}
+      {showModal && (
+        <Modal
+          closeModal={setShowModal}
+          loading={loading}
+          player={selectedPlayer}
+        />
+      )}
+      <div className="Sortbutton">
         <h2>Sort by:</h2>
         <button onClick={toggleSort} className={isSorted ? 'sorted-button' : 'default-button'}>A–Z</button>
-
       </div>
     </div>
   )
