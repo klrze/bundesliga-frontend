@@ -1,0 +1,13 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "npm",
+			"script": "preview",
+			"path": "bundesliga-frontend",
+			"problemMatcher": [],
+			"label": "npm: preview - bundesliga-frontend",
+			"detail": "vite preview"
+		}
+	]
+}

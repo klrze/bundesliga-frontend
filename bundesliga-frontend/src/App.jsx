@@ -10,11 +10,14 @@ import Team from './components/Team';
 import './App.css'
 import Card from './components/Card';
 
+
 function App() {
   const [count, setCount] = useState(0)
 
+
   return (
     <>
+    <div class="app">
     <BrowserRouter>
       <Routes>
         <Route path='/' element = { <Home />}></Route>
@@ -23,6 +26,7 @@ function App() {
         <Route path='/team' element = { <Team />}></Route>
       </Routes>
       </BrowserRouter>
+      </div>
     </>
   )
 }

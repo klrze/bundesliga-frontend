@@ -1,0 +1,118 @@
+.formation {
+  background-color: green;
+  border-style: solid;
+  border-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 125px;
+  margin-right: 25px;
+  height: 860px;
+  width: 90%;
+  position: relative;
+}
+
+.formation select {
+    display: block;
+  margin-left: 0;
+}
+
+.bench {
+  background-color: linen;
+  border-style: solid;
+  border-color: black;
+  float: left;
+  width: 400px;
+  margin-top: 125px;
+  height: 860px;
+  margin-left: 25px;
+}
+
+
+
+.side {
+ display: flex;          /* make formation and bench side-by-side */
+  width: 95%;
+ margin: auto;
+}
+
+.formType {
+width: 110px;
+height: 30px;
+margin-top: 145px;
+float: left;
+position: absolute;
+margin-left: 20px;
+}
+
+.formType select {
+  font-size: 30px;
+}
+
+.title {
+  font-size: 50px;
+  margin-left:95px;
+}
+
+.divider {
+  width: 90%;
+  height: 2px;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  margin:50px auto;
+}
+
+.benchPlayer {
+  border-style: solid;
+  border-color: white;
+  width: 90%;
+  height: 100px;
+  margin: 10px auto;
+  background-color: lightpink;
+position: relative;
+}
+
+.benchPlayer button {
+display: flex;
+flex-direction: column;
+margin-left: 230px;
+margin-top: 10px;
+color: white;
+background-color: brown;
+
+}
+
+.benchPlayer h2 {
+
+width: 150px;
+height: 20px;
+  position: absolute;
+}
+
+.team {
+  background-color: lightblue;
+  margin: 60px auto;
+  border-style: solid;
+  border-color: black;
+  width: 93%;
+  display: flex;
+  padding: 20px;
+  
+}
+
+
+
+.player {
+  
+  border-style: solid;
+  border-color: white;
+  width: 250px;
+  height: 250px;
+  background-color: lightgreen;
+  margin: 20PX 20PX;
+  display: flex;
+   /* optional, for content inside .player */
+  align-items: center; 
+   
+}

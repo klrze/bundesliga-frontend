@@ -1,0 +1,56 @@
+.container {
+  border-style: solid;
+  border-color: white;
+  width: 1450px;
+  max-width: 1450px;;
+  padding: auto;
+  height: 770px;
+  margin-top: auto;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.row1, .row2, .row3, .row4 {
+  border-style: solid;
+  border-color: white;
+  height: 720px;
+  display: flex;
+  align-items: center;
+  margin: auto;
+  position: absolute;
+}
+
+.row1 {
+  width: 275px;
+  margin-right: 1150px;
+}
+
+.row2 {
+  width: 370px;
+  margin-right: 480px;
+}
+.row3 {
+  width: 370px;
+  margin-left: 285px;
+}
+.row4 {
+  width: 370px;
+  margin-left: 1050px;
+}
+
+.goalkeeper {
+  border-style: solid;
+  border-color: white;
+  width: 170px;
+  height: 120px;
+  margin: auto;
+  padding: auto;
+  background-color: yellow;
+}
+
+
+
+.row1 h2{
+  color: black;
+}

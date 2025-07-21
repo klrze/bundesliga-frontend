@@ -4,6 +4,7 @@ import { allPlayers } from '../services/Service';
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 import Modal from './Modal'
+import { copyPlayerToSelected } from '../services/Service';
 
 const Card = () => {
 
@@ -14,6 +15,17 @@ const Card = () => {
   const [selectedPlayer, setSelectedPlayer] = useState(null);
   const [loading, setLoading] = useState(false);
 
+  
+const handleCopy = async (teamPlayer) => {
+   console.log("handleCopy called with:", teamPlayer);
+  try {
+    const response = await copyPlayerToSelected(teamPlayer);
+    
+  } catch (error) {
+    console.error(error);
+    alert("Failed to copy player");
+  }
+};
 
   useEffect(() => {
     // Replace this URL with your actual endpoint
@@ -61,6 +73,7 @@ const playersToDisplay = searchTerm ? filteredPlayers : players.slice(0, 50);
   };
   
   
+  
   return (
     <div>
       <div className="search">
@@ -78,7 +91,7 @@ const playersToDisplay = searchTerm ? filteredPlayers : players.slice(0, 50);
           <p className="playerInfo">{player.club}</p>
           <p className="playerInfo">{player.nationality}</p>
           <button className="options" onClick={() => handleInfoClick(player)}>Info</button>
-          <button className="options">Add</button>
+          <button className="options" onClick={() => handleCopy(player)}>Add</button>
         </div>
         ))}
 
