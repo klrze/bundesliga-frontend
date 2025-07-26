@@ -7,19 +7,14 @@ import { allTeamPlayers } from '../services/Service';
 
 const defaultForm = () => {
 
-  useEffect(() => {
-    // Replace this URL with your actual endpoint
-  axios.get('http://localhost:8080/api/team_player') // default, unsorted
-    .then((res) => setPlayers(res.data))
-    .catch((err) => console.error('Error fetching players:', err));
-  }, []);
+
 
   return (
     <div>
       <div className="container">
         <div className="row1">
           <h2>GK</h2>
-          <div className="goalkeeper">
+          <div className="goalkeeper box">
             <h2>Player Name</h2>
           </div>
         </div>
@@ -30,7 +25,12 @@ const defaultForm = () => {
         
         </div>
         <div className="row4">
-        
+          <div className="leftwing box">
+            
+          </div>
+          <div className="striker box">
+          
+          </div>
         </div>
       </div>
     </div>

@@ -9,14 +9,16 @@ import { allTeamPlayers } from '../services/Service';
 import axios from 'axios';
 import { useEffect } from 'react';
 import '../App.css';
+import PosModal from './PosModal';
 
 
 const Team = () => {
   
-   const [selectedOption, setSelectedOption] = useState('4-3-3');
-   const [teamPlayers, setTeamPlayers] = useState([]);
+  const [selectedOption, setSelectedOption] = useState('4-3-3');
+  const [teamPlayers, setTeamPlayers] = useState([]);
   const [isModalOpen, setIsModalOpen] = useState(false);
-    const [selectedPlayer, setSelectedPlayer] = useState(null);
+  const [selectedPlayer, setSelectedPlayer] = useState(null);
+  const [isPosModalOpen, setIsPosModalOpen] = useState(false);  
 
 
     const handleChange = (event) => {
@@ -50,17 +52,38 @@ const Team = () => {
     setIsModalOpen(false);
   };
 
+  const openPosModal = (player) => {
+    setSelectedPlayer(player);
+    setIsPosModalOpen(true);
+  };
+   
+  const closePosModal = () => {
+    setSelectedPlayer(null);
+    setIsPosModalOpen(false);
+  };
+
+
   return (
     <div>
       <div className={isModalOpen ? 'blurred' : ''}>
       <Header />
       
         <div className="side"> 
+{isPosModalOpen && (
+  <PosModal 
+    closePosModal={setIsPosModalOpen}
+    posPlayer={selectedPlayer} 
+    formation={selectedOption}
+  />
+)}
+
           <div className="formation">
             
           </div>
           <div className="formType">
+            <h3>*Changing Formation Will Reset Players</h3>
           <select value={selectedOption} onChange={handleChange}>
+            
               <option value="4-3-3">4-3-3</option>
               <option value="4-4-2">4-4-2</option>
             </select>
@@ -82,7 +105,7 @@ const Team = () => {
   .map(player => (
             <div className="benchPlayer" key={player.id}>
               <h2>{player.name}</h2>
-              <button className="start">Start</button>
+              <button className="start" onClick={() => openPosModal(player)}>Start</button>
               <button className="info" onClick={() => openModal(player)}>Info</button>
               <button className="remove" onClick={() => deletePlayer(player.id)}>Remove</button>
             </div> ))}
@@ -102,8 +125,8 @@ const Team = () => {
         </div>
 
       {isModalOpen && selectedPlayer && (
-  <div className="modal-overlay">
-    <div className="modal">
+      <div className="modal-overlay">
+        <div className="modal">
       <h3>{selectedPlayer.name}</h3>
       <ul>
         {selectedPlayer.teamInfo?.length > 0 ? (

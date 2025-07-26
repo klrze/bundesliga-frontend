@@ -26,6 +26,9 @@
   margin-top: 125px;
   height: 860px;
   margin-left: 25px;
+  overflow: hidden; 
+  overflow-y: auto;
+  
 }
 
 
@@ -34,6 +37,7 @@
  display: flex;          /* make formation and bench side-by-side */
   width: 95%;
  margin: auto;
+
 }
 
 .formType {
@@ -98,6 +102,9 @@ height: 20px;
   width: 93%;
   display: flex;
   padding: 20px;
+  overflow: hidden; 
+  overflow-y: auto;
+  flex-wrap: wrap;
   
 }
 
@@ -110,9 +117,18 @@ height: 20px;
   width: 250px;
   height: 250px;
   background-color: lightgreen;
-  margin: 20PX 20PX;
+  margin: 20px 20px;
   display: flex;
    /* optional, for content inside .player */
   align-items: center; 
    
+}
+
+.formType h3 {
+  display: inline-block;
+  width: 200px;
+  height: 30px;
+  margin-left: 100px;
+  margin-top: -10px;
+  position: absolute;
 }

@@ -37,17 +37,41 @@
 .row4 {
   width: 370px;
   margin-left: 1050px;
+  position: relative;
+}
+
+.box {
+  border-style: solid;
+  border-color: white;
+  background-color: yellow;
 }
 
 .goalkeeper {
-  border-style: solid;
-  border-color: white;
   width: 170px;
   height: 120px;
   margin: auto;
   padding: auto;
-  background-color: yellow;
+} 
+
+.leftwing {
+  width: 170px;
+  height: 120px;
+  
+  margin-top: -450px;
+  margin-left: 110px;
+  padding: auto;
+  position: absolute;
 }
+
+.striker {
+  width: 170px;
+  height: 120px;
+  margin: auto;
+  margin-left: 180px;
+  padding: auto;
+  position: absolute;
+} 
+
 
 
 
