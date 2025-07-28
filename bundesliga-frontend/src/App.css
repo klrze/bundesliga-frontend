@@ -33,3 +33,19 @@ body {
   z-index: 1000;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
+
+.modal2 {
+   border-style: solid;
+  border-color: black;
+  height:800px;
+  width:950px;
+  margin-left: 20px;
+  margin-top:-35px;
+   text-align: left;
+   padding: auto;
+    background-color: white;
+  padding: 2rem;
+  border-radius: 8px;
+  z-index: 1000;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}

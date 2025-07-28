@@ -13,40 +13,60 @@
 }
 
 .formation select {
-    display: block;
+  display: block;
   margin-left: 0;
 }
 
-.bench {
+.starters {
   background-color: linen;
   border-style: solid;
   border-color: black;
   float: left;
   width: 400px;
   margin-top: 125px;
-  height: 860px;
+  height: 620px;
   margin-left: 25px;
   overflow: hidden; 
   overflow-y: auto;
-  
+
+
 }
 
 
 
-.side {
- display: flex;          /* make formation and bench side-by-side */
-  width: 95%;
- margin: auto;
 
+.posSelector {
+  background-color: linen;
+  border-style: solid;
+  border-color: black;
+  width: 349px;
+  height: 220px;
+  margin-top: 778px;
+  margin-left: 1558px;
+  position: absolute;
+  float: left;
+    top: 750px;      /* move down */
+   
+}
+
+.posSelector h2 {
+  margin-left: 18px;
+  margin-top: 10px;
+}
+
+.side {
+  display: flex;          /* make formation and bench side-by-side */
+  width: 95%;
+  margin: auto;
 }
 
 .formType {
-width: 110px;
-height: 30px;
-margin-top: 145px;
-float: left;
-position: absolute;
-margin-left: 20px;
+  width: 110px;
+  height: 30px;
+  margin-top: 145px;
+  float: left;
+  position: absolute;
+  margin-left: 20px;
 }
 
 .formType select {
@@ -55,7 +75,7 @@ margin-left: 20px;
 
 .title {
   font-size: 50px;
-  margin-left:95px;
+  margin-left: 95px;
 }
 
 .divider {
@@ -64,34 +84,44 @@ margin-left: 20px;
   background-color: black;
   display: flex;
   justify-content: center;
-  margin:50px auto;
+  margin: 50px auto;
 }
 
-.benchPlayer {
+.startPlayer {
   border-style: solid;
   border-color: white;
   width: 90%;
   height: 100px;
   margin: 10px auto;
   background-color: lightpink;
-position: relative;
+  position: relative;
 }
 
-.benchPlayer button {
-display: flex;
-flex-direction: column;
-margin-left: 230px;
-margin-top: 10px;
-color: white;
-background-color: brown;
-
+.startPlayer button {
+  display: flex;
+  flex-direction: column;
+  margin-left: 230px;
+  margin-top: 10px;
+  color: white;
+  background-color: brown;
+  border: none;
+  border-radius: 4px;
+  padding: 6px 10px;
+  cursor: pointer;
 }
 
-.benchPlayer h2 {
-
-width: 150px;
-height: 20px;
+.startPlayer h2 {
+  width: 150px;
+  height: 20px;
   position: absolute;
+}
+
+.startPlayer h3 {
+  width: 150px;
+  height: 20px;
+  position: absolute;
+  margin-top: 1px;
+  margin-left: -60px;
 }
 
 .team {
@@ -105,13 +135,14 @@ height: 20px;
   overflow: hidden; 
   overflow-y: auto;
   flex-wrap: wrap;
-  
+  pointer-events: none;
 }
 
-
+.team button {
+  pointer-events: auto;
+}
 
 .player {
-  
   border-style: solid;
   border-color: white;
   width: 250px;
@@ -119,9 +150,9 @@ height: 20px;
   background-color: lightgreen;
   margin: 20px 20px;
   display: flex;
-   /* optional, for content inside .player */
   align-items: center; 
-   
+  justify-content: center;
+  flex-direction: column;
 }
 
 .formType h3 {
@@ -132,3 +163,23 @@ height: 20px;
   margin-top: -10px;
   position: absolute;
 }
+
+/* New styles for position selector buttons */
+.posSelector button {
+  margin: 5px;
+  padding: 10px 15px;
+  font-weight: bold;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  background-color: #eee;
+  color: #333;
+}
+
+.posSelector button:hover:not(:disabled) {
+  background-color: #4caf50; /* green hover */
+  color: white;
+}
+
+
